@@ -28,6 +28,15 @@ function Xadrez(){
         document.body.appendChild(p);
     }
 }
-Xadrez();
+//Xadrez();
 
-function Palindromo(){}
+function Palindromo(){
+    const palavra = prompt("Informe a palavra:");
+    const palavraInvertida = palavra.split('').reverse().join('');
+    if(palavra === palavraInvertida){
+        console.log("Eh um palindromo!");
+    } else{
+        console.log("Nao eh palindromo");
+    }
+}
+Palindromo();
