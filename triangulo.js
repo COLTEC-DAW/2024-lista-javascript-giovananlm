@@ -1,3 +1,5 @@
+/* Lista de JavaScript - Giovana Nassif Leonel Membrive 
+JavaScript: Conceitos Básicos */
 function Triangulo(){
     const quantidadeLinhas = parseInt(prompt("Informe a quantidade de linhas:"));
 
@@ -56,4 +58,52 @@ function Contando(){
         }
     }
 }
-Contando();
+//Contando();
+
+//JavaScript: Funções
+//Mínimo e Máximo
+function min(x, y){
+    let temp = 0;
+    if(x > y){
+        temp = y;
+    } else {
+        temp = x;
+    }
+    return temp;
+}
+function max(x, y){
+    let temp = 0;
+    if(x > y){
+        temp = x;
+    } else {
+        temp = y;
+    }
+    return temp;
+}
+console.log(min(7, 1), max(7,1));
+
+//Recursividade
+/*function mod(num, module){
+    let modulo = num % 2;
+    let resultado = 0;
+    if(modulo != 0){ 
+        resultado = mod(num, modulo); 
+        return resultado;
+    } else { return modulo;}
+}
+
+/*let x = mod(7, 3);
+console.log(x);*/
+
+//Contando caracteres
+/*function countChars(frase, n){
+    let contador = 0;
+    for(i = 0; i < frase.length; i++){
+        if(frase[i] == n){
+            contador++;
+        }
+    }
+    return contador;
+}*/
+
+//JavaScript: Objetos & Arrays
