@@ -107,3 +107,15 @@ console.log(x);*/
 }*/
 
 //JavaScript: Objetos & Arrays
+
+/*function range(min, max, i){
+    let rng = [];
+    for(let z = 0; z < i; z++){
+        rng.push(z);
+    }
+    return rng;
+}*/
+/*let r = range(2, 9, 9-2);
+for(i = 0; i < r.length; i++){
+    console.log(r[i]);
+}*/
