@@ -107,15 +107,27 @@ console.log(x);*/
 }*/
 
 //JavaScript: Objetos & Arrays
-
+//Trabalhando com intervalos 
 /*function range(min, max, i){
     let rng = [];
-    for(let z = 0; z < i; z++){
+    for(let z = min; z < max; z += i){
         rng.push(z);
     }
     return rng;
-}*/
-/*let r = range(2, 9, 9-2);
-for(i = 0; i < r.length; i++){
-    console.log(r[i]);
-}*/
+}
+let r = range(2, 9, 2);
+console.log(r);*/
+
+//Revertendo um array
+/*function reverseArray(a){
+    let temp = [];
+    for(let i = 0; i < a.length; i++){
+        temp[i] = a[a.length - 1 - i];
+    }
+    return temp;
+}
+console.log(reverseArray("som"));*/
+
+//Trabalhando com Listas
+
+//Deep Equals
