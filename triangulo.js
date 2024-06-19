@@ -151,5 +151,14 @@ function reverseArray(a){
 console.log(reverseArray("Nassif"));
 
 //Trabalhando com Listas
+function toList(array){
+    let list = null;
+    for (let i = array.length - 1; i >= 0; i--) {
+        list = { value: array[i], rest: list };
+    }
+    return list;
+}//testando...
+let x = toList([4, 5, 6, 6, 7]);
+console.log(x);
 
 //Deep Equals
