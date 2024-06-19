@@ -141,14 +141,14 @@ let r = range(2, 9, 2);
 console.log(r);
 
 //Revertendo um array
-/*function reverseArray(a){
+function reverseArray(a){
     let temp = [];
     for(let i = 0; i < a.length; i++){
         temp[i] = a[a.length - 1 - i];
     }
     return temp;
-}
-console.log(reverseArray("som"));*/
+}//testando...
+console.log(reverseArray("Nassif"));
 
 //Trabalhando com Listas
 
