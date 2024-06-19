@@ -116,11 +116,8 @@ mod(7,4);
 mod2(10);
 mod2(11); //funfa!
 
-/*let x = mod(7, 3);
-console.log(x);*/
-
 //Contando caracteres
-/*function countChars(frase, n){
+function countChars(frase, n){
     let contador = 0;
     for(i = 0; i < frase.length; i++){
         if(frase[i] == n){
@@ -128,7 +125,8 @@ console.log(x);*/
         }
     }
     return contador;
-}*/
+}//testando...
+console.log(countChars("Nassif", 's')); //funfa
 
 //JavaScript: Objetos & Arrays
 //Trabalhando com intervalos 
