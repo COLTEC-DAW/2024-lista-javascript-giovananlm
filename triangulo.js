@@ -126,19 +126,19 @@ function countChars(frase, n){
     }
     return contador;
 }//testando...
-console.log(countChars("Nassif", 's')); //funfa
+console.log(countChars("Nassif", 's'));
 
 //JavaScript: Objetos & Arrays
 //Trabalhando com intervalos 
-/*function range(min, max, i){
+function range(min, max, i){
     let rng = [];
     for(let z = min; z < max; z += i){
         rng.push(z);
     }
     return rng;
-}
+}//testando...
 let r = range(2, 9, 2);
-console.log(r);*/
+console.log(r);
 
 //Revertendo um array
 /*function reverseArray(a){
