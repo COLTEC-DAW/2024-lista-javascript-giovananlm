@@ -83,14 +83,38 @@ function max(x, y){
 console.log(min(7, 1), max(7,1));
 
 //Recursividade
-/*function mod(num, module){
-    let modulo = num % 2;
-    let resultado = 0;
-    if(modulo != 0){ 
-        resultado = mod(num, modulo); 
-        return resultado;
-    } else { return modulo;}
+function mod2(num){
+    let modulo = num - 2;
+    let ehDivisivel = false;
+    if(modulo == 0){ 
+        ehDivisivel = true; 
+        console.log("é divisível");
+        return ehDivisivel;
+    } else if(modulo > 0){
+        mod2(modulo);
+    } else { 
+        console.log("não é divisível");
+        return ehDivisivel;}
 }
+
+function mod(num, modulo){
+    let divisivel = num - modulo;
+    let ehDivisivel = false;
+    if(divisivel > 0){
+        mod(divisivel, modulo);
+    } else if (divisivel == 0){
+        ehDivisivel = true;
+        console.log("é divisível");
+        return ehDivisivel;
+    } else{
+        console.log("não é divisível");
+        return ehDivisivel;
+    }
+}//testando...
+mod(9,3);
+mod(7,4);
+mod2(10);
+mod2(11); //funfa!
 
 /*let x = mod(7, 3);
 console.log(x);*/
