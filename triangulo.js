@@ -198,3 +198,53 @@ const obj3 = {
 //testando...
 console.log(deepEquals(obj1, obj2));
 console.log(deepEquals(obj2, obj3));
+
+//Funções de Primeira Ordem
+//Ordenação
+function bubbleSort(array, criterioOrdem) {
+    let swapped;
+    do {
+        swapped = false;
+        for (let i = 0; i < array.length - 1; i++) {
+            if (criterioOrdem(array[i], array[i + 1])) {
+                // Trocam os numeros
+                const temp = array[i];
+                array[i] = array[i + 1];
+                array[i + 1] = temp;
+                swapped = true;
+            }
+        }
+    } while (swapped);
+}
+
+// Ordenação crescente
+function criterioCrescente(a, b) {
+    return a > b;
+}
+
+// Ordenação decrescente
+function criterioDecrescente(a, b) {
+    return a < b;
+}
+
+// Ordenação crescente para números ímpares n sei fazer
+
+// Ordenação decrescente para números pares
+function criterioDecrescentePares(a, b) {
+    return a % 2 === 0 && b % 2 === 0 && a < b;
+}
+//Testando...
+const vetor = [9, 11, 10, 3, 5, 2, 1, 6];
+
+// Ordenação crescente
+bubbleSort(vetor, criterioCrescente);
+console.log("Ordenação Crescente:", vetor);
+
+// Ordenação decrescente
+bubbleSort(vetor, criterioDecrescente);
+console.log("Ordenação Decrescente:", vetor);
+
+// Ordenação decrescente para pares
+bubbleSort(vetor, criterioDecrescentePares);
+console.log("Ordenação Decrescente para Pares:", vetor);
+
