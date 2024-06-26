@@ -162,3 +162,39 @@ let x = toList([4, 5, 6, 6, 7]);
 console.log(x);
 
 //Deep Equals
+function deepEquals(obj1, obj2) {
+    const chavesObj1 = Object.keys(obj1).sort();
+    const chavesObj2 = Object.keys(obj2).sort();
+  
+    if (chavesObj1.length !== chavesObj2.length) {
+        return false;
+    }
+  
+    for (let i = 0; i < chavesObj1.length; i++) {
+        if (chavesObj1[i] !== chavesObj2[i]) {
+            return false;
+        }
+    }
+    return true;
+}
+  
+const obj1 = {
+    "nome": "enaldinho",
+    "profissao": "youtuber",
+    "instagram": "enaldinho"
+};
+  
+const obj2 = {
+    "pais": "Etiópia",
+    "continente": "África",
+    "capital": "Addis Ababa"
+};
+  
+const obj3 = {
+    "pais": "Eslovênia",
+    "continente": "Europa",
+    "capital": "Liubliana"
+};
+//testando...
+console.log(deepEquals(obj1, obj2));
+console.log(deepEquals(obj2, obj3));
