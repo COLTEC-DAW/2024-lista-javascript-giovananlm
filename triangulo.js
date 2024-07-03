@@ -289,3 +289,80 @@ function primo(num){
 }//testando...
 console.log(checagem(5, primo), checagem(25, primo));
 
+//Transformações em uma String
+function transforma (string, criterio){
+    return criterio(string);
+}
+function vogaisGrandes(string){
+    let vogais = "aeiou";
+    let temp = "";
+    let boleano = false;
+    for(let i = 0; i < string.length; i++){
+        boleano = false;
+        for(let j = 0; j < vogais.length; j++){
+            if(string[i] == vogais[j]){
+                temp += string[i].toUpperCase();
+                boleano = true;
+            }
+        }
+        if(boleano == false){
+            temp += string[i];
+        }
+    }
+    return temp;
+}
+function consoantesGrandes(string){
+    let consoantes = "bcdfghjklmnpqrstwxyz";
+    let temp = "";
+    let boleano = false;
+    for(let i = 0; i < string.length; i++){
+        boleano = false;
+        for(let j = 0; j < consoantes.length; j++){
+            if(string[i] == consoantes[j]){
+                temp += string[i].toUpperCase();
+                boleano = true;
+            }
+        }
+        if(boleano == false){
+            temp += string[i];
+        }
+    }
+    return temp;
+}
+function vogaisPequenas(string){
+    let vogais = "AEIOU";
+    let temp = "";
+    let boleano = false;
+    for(let i = 0; i < string.length; i++){
+        boleano = false;
+        for(let j = 0; j < vogais.length; j++){
+            if(string[i] == vogais[j]){
+                temp += string[i].toLowerCase();
+                boleano = true;
+            }
+        }
+        if(boleano == false){
+            temp += string[i];
+        }
+    }
+    return temp;
+}
+function consoantesPequenas(string){
+    let consoantes = "BCDFGHJKLMNPQRSTVWXYZ";
+    let temp = "";
+    let boleano = false;
+    for(let i = 0; i < string.length; i++){
+        boleano = false;
+        for(let j = 0; j < consoantes.length; j++){
+            if(string[i] == consoantes[j]){
+                temp += string[i].toLowerCase();
+                boleano = true;
+            }
+        }
+        if(boleano == false){
+            temp += string[i];
+        }
+    }
+    return temp;
+}
+console.log(transforma("Banana", vogaisGrandes), transforma("Banana", consoantesGrandes), transforma("BANANA", vogaisPequenas), transforma("BANANA", consoantesPequenas));
