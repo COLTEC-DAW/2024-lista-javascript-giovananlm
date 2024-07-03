@@ -248,3 +248,22 @@ console.log("Ordenação Decrescente:", vetor);
 bubbleSort(vetor, criterioDecrescentePares);
 console.log("Ordenação Decrescente para Pares:", vetor);
 
+//Criptografia
+function Criptografar(string, criterio, num){
+    let temp = "";
+    string = string.toLowerCase();
+    for(i = 0; i < string.length; i++){
+        temp += criterio(string[i], num);
+    }
+    return temp;
+}
+
+function criterioCesar(char, num){
+    let alfabeto = "abcdefghijklmnopqrstuvwxyz";
+    for(j = 0; j < alfabeto.length; j++){
+        if(char == alfabeto[j]){
+            return alfabeto[(j + num) % 26];
+        }
+    }
+}//testando...
+console.log(Criptografar("Nassif", criterioCesar, 1));
