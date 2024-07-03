@@ -252,7 +252,7 @@ console.log("Ordenação Decrescente para Pares:", vetor);
 function Criptografar(string, criterio, num){
     let temp = "";
     string = string.toLowerCase();
-    for(i = 0; i < string.length; i++){
+    for(let i = 0; i < string.length; i++){
         temp += criterio(string[i], num);
     }
     return temp;
@@ -260,10 +260,32 @@ function Criptografar(string, criterio, num){
 
 function criterioCesar(char, num){
     let alfabeto = "abcdefghijklmnopqrstuvwxyz";
-    for(j = 0; j < alfabeto.length; j++){
+    for(let j = 0; j < alfabeto.length; j++){
         if(char == alfabeto[j]){
             return alfabeto[(j + num) % 26];
         }
     }
 }//testando...
 console.log(Criptografar("Nassif", criterioCesar, 1));
+
+//Verificando um número
+function checagem(num, criterio){
+    return criterio(num);
+}
+function impar(num){
+    if(num % 2 != 0){
+        return true;
+    } else{
+        return false;
+    }
+}
+function primo(num){
+    for(let i = 2; i <= num/2; i++){
+        if(num % i == 0){
+            return false;
+        } 
+    }
+    return true;
+}//testando...
+console.log(checagem(5, primo), checagem(25, primo));
+
